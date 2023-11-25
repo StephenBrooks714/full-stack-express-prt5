@@ -1,0 +1,28 @@
+<div class="row justify-content-center align-items-center text-center d-flex mx-auto flex-center" style="margin-top: 140px; margin-bottom: 70px;">
+    <div class="col-lg-5">
+        <h6 class="h3">Contact Us</h6>
+        <p>
+            <a href="mailto:someone@gmail.com">Email Support</a>
+        </p>
+        <p>
+            <a href="tel:555-555-5555">Call Support</a>
+        </p>
+        <img src="https://reiblinggrassandgrounds.ca/rggsite/uploads/simplex/teaser/contactus.png" 
+            class="img-fluid"
+            alt="Contact Us" 
+        />
+    </div>
+    <div class="col-lg-7">
+        <form action="/send/form" method="post" enctype="multipart/form-data">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control mb-3" required />
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control mb-3" required />
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="from" class="form-control mb-3" required />
+            <label for="text" class="form-label">Your Message</label>
+            <textarea name="text" id="text" class="form-control mb-3" rows="5"></textarea>
+            <button class="btn btn-primary" type="submit">submit form</button>
+        </form>
+    </div>
+</div>

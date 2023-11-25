@@ -1,0 +1,40 @@
+<div class="row justify-content-center align-items-center text-center flex-center d-flex mx-auto" style="margin-bottom: 70px;">
+    <% if(blogs == "") { %> 
+        <div class="col-md-8">
+            <h2>There are no blogs posted yet.</h2>
+        </div>
+    <% } else { %>
+        <% for(i=0; i < blogs.length; i++) { %> 
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <a href="#" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal">
+                    <p class="h4"><%= blogs[i].title %></p>
+                    <div class="card-header-pills">
+                        <img src="<%= blogs[i].image %>" class="card-img" alt="<%= blogs[i].title %>" />
+                    </div>
+                </a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><%= blogs[i].title %></h5>
+                        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="<%= blogs[i].image %>" class="w-50" alt="<%= blogs[i].title %>">
+                            <p class=>
+                                <%= blogs[i].body %>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-ripple-init data-mdb-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-mdb-ripple-init>Save changes</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <% } %>
+</div>

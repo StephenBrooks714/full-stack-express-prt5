@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/header') -%>
+<body>
+<%- include('layouts/navBar') -%>
+<%- include('partials/home-intro') -%>
+    
+<main>
+    <section class="container my-5 py-5" itemid="articles & features" itemprop="article and features section" itemscope>
+        <%- include('data/home-features') -%>
+        <%- include('partials/home-section-1') -%>
+        <%- include('data/home-projects') -%>
+    </section>
+    <%- include('layouts/footer') -%>
+</main>
+
+    <!-- MDB -->
+<%- include('layouts/scripts') -%>
+</body>
+</html>

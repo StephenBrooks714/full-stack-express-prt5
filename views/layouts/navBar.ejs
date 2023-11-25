@@ -1,0 +1,50 @@
+<nav data-mdb-navbar-init class="navbar navbar-expand-lg navbar-dark fixed-top bg-grey-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/appLogo.png" height="40" width="70" alt="app logo">
+      </a>
+      <button
+        data-mdb-collapse-init
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <% if(loggedIn) { %> 
+            <li class="nav-item">
+              <a class="nav-link" href="/newPost">New Post</a>
+            </li>
+          <% } %>
+        </ul>
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <% if(loggedIn) { %> 
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/logout">Logout</a>
+            </li>
+          <% } else { %> 
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/login">Login</a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+</nav>

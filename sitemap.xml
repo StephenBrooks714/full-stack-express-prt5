@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://udemy-express-node-cf75af940836.herokuapp.com/</loc>
+  </url>
+  <url>
+    <loc>https://udemy-express-node-cf75af940836.herokuapp.com/blogs</loc>
+  </url>
+  <url>
+    <loc>https://udemy-express-node-cf75af940836.herokuapp.com/contact</loc>
+  </url>
+</urlset>
