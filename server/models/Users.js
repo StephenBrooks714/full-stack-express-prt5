@@ -9,6 +9,11 @@ const mongoose = require('mongoose');
             unique: [true,'Please provide username'],
             required: true
         },
+        userid: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
+        },
         fName: {
             type: String,
             required: true

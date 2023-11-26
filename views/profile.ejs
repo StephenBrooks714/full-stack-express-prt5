@@ -1,0 +1,75 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        margin: 20px;
+        font-size: 1.2em;
+    }
+
+    h1 {
+        padding: 0.5rem 1rem;
+        margin: 2rem 0 0;
+        color: white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        background: linear-gradient(black, white);
+    }
+
+    h1.vertical {
+        background: linear-gradient(90deg, black, white);
+    }
+
+    h1.color-stop {
+        background: linear-gradient(90deg, black 11ch, white 11ch);
+    }
+
+    h1.diagonal-stop {
+        background: linear-gradient(70deg, black 11ch, white 11.05ch);
+    }
+
+    p {
+        font-size: 2rem;
+        border: 4px solid;
+        padding: 2rem 0.5rem 1.5rem;
+    }
+
+</style>
+<body>
+<%- include('layouts/navBar') -%>
+<!--main body-->
+<main class="container">
+    <div class="row justify-content-center align-items-center text-center d-flex mx-auto flex-center" style="height: 100vh;">
+        <div class="col-lg-10">
+            <h1 class="display-4 fw-bold">User Bio</h1>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-3">
+                    <h2 class="h4"><%= user.fName %> <%= user.lName %></h2>
+                    <p class="lead">
+                       <strong>User handle:</strong> <%= user.username %> <br>
+                       <strong>Email:</strong> <%= user.email %> <br>
+                       <strong>Joined On:</strong> <%= user.joinedDate.toLocaleString() %>
+                    </p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="lead">
+                        <strong class="h4">About Me</strong> <br>
+                        <%= user.bio %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--main body-->
+<%- include('layouts/footer') -%>
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>

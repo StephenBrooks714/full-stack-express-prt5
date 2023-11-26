@@ -9,4 +9,10 @@
   <url>
     <loc>https://udemy-express-node-cf75af940836.herokuapp.com/contact</loc>
   </url>
+  <url>
+    <loc>https://udemy-express-node-cf75af940836.herokuapp.com/register</loc>
+  </url>
+  <url>
+    <loc>https://udemy-express-node-cf75af940836.herokuapp.com/login</loc>
+  </url>
 </urlset>

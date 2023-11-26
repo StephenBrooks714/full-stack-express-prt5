@@ -1,0 +1,38 @@
+<% if(feature == "") { %>
+<h1>No Features Posted</h1>
+<% } else { %>
+    <% for(i=0; i < feature.length; i++) { %>
+        <!-- Grid column -->
+        <div class="col-lg-10 col-md-12 mb-4">
+
+            <!-- Card -->
+            <div class="p-3 card">
+
+                <!-- Content -->
+                <div class="card-body">
+
+                    <h6 class="font-weight-bold text-uppercase mb-4"><%= feature[i].title %></h6>
+
+                    <!-- Price -->
+                    <p class="display-3 font-weight-normal">$<%= feature[i].image %></p>
+
+                    <ul class="mb-0">
+                        <% feature.feature.forEach(function(feature){ %>
+                            <li>
+                                <p><%= feature %></p>
+                            </li>
+                        <% }) %>
+                    </ul>
+
+                    <a href="<%= feature[i].url %>" target="_blank" class="btn btn-outline-primary btn-md btn-rounded btn-block">Get started</a>
+
+                </div>
+                <!-- Content -->
+
+            </div>
+            <!-- Card -->
+
+        </div>
+        <!-- Grid column -->
+    <% } %>
+<% } %>
